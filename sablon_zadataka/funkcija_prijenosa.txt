@@ -1,0 +1,9 @@
+clear all;
+clc;
+M=10;
+B=20;
+k=200;
+x=tf([1],[M B k]);
+t=0:0.01:10;
+U=20*cos(t);
+lsim(x,U,t)

@@ -1,0 +1,21 @@
+syms s t;
+Y=1/(s^3+s);
+ilaplace(Y);
+t=0:0.1:10;
+x1=1 - cos(t);
+plot(t, x1,Color='blue' ), legend('1 - cos(t)');
+hold on;
+Y=1/(s^4+s^2);
+ilaplace(Y);
+x2=t - sin(t);
+plot(t,x2,Color='red'), legend('t - sin(t)');
+hold on;
+Y=1/(s^5+2*s^3+s);
+ilaplace(Y);
+x3=1 - (t.*sin(t))/2 - cos(t);
+plot(t,x3,Color='green'), legend('t - sin(t)');
+Y=1/(s^5+s^3);
+ilaplace(Y);
+x4=cos(t) + (t.^2)/2 - 1;
+plot(t,x4,Color='black'), legend('t - sin(t)');
+%%

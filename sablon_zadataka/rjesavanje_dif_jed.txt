@@ -1,0 +1,6 @@
+
+odle=('Dx=-2*x+1'); jednacina
+int='x(0)=0';	uslov
+x=dsolve(odle,int);
+pretty(x)
+
